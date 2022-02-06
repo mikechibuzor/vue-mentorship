@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <style>
+            .box {
+	width:280px;
+    margin: auto;
+	height:280px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	font-family: "Inconsolata", monospace;
+	font-size: 28px;
+	border:1px solid #c39f76;
+	box-sizing:border-box;
+}
+
+.box{
+display: flex;
+justify-content: center;
+perspective: 133px;
+	perspective-origin: bottom;
+	overflow: hidden;
+}
+.box:before{
+	content: "Hello World Hello World Hello World Hello World Hello World Hello World Hello World";
+	text-align: justify;
+	width:190px;
+box-sizing: border-box;
+text-align: center;
+transform: rotateX(30deg);
+	animation: move 4s linear infinite;
+}
+
+@keyframes move{
+	from{
+		transform: translateY(100%)  rotateX(30deg) ;
+	}
+	to{
+		transform: translateY(10%)  rotateX(30deg);
+	}
+}
+        </style>
+    </head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>
